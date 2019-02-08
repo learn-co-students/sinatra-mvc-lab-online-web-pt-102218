@@ -10,6 +10,7 @@ class PigLatinizer
         array.push(remove).push("ay").join("")
      elsif array.length == 1
         array.push("way").join("")
+     elsif
    end
   end
 end
