@@ -28,7 +28,11 @@ class PigLatinizer
        array.unshift("ay").join("")
      elsif vowels.include?(array[0]) && !vowels.include?(array[1]) && vowels.include?(array[2]) && !vowels.include?(array[3])
        array.push("way").join("")
-
+     elsif vowels.include?(array[0]) && !vowels.include?(array[1]) && !vowels.include?(array[2])
+       array.push("way").join("")
+     elsif !vowels.include?(array[0]) && vowels.include?(array[1]) && vowels.include?(array[2]) && !vowels.include?(array[3])
+       remove = array.shift
+       array.push(remove).push("ay").join("")
     end
   end
 end
